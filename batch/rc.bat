@@ -26,20 +26,21 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFChVVQWGAE+/Fb4I5/jH+/mfnk8UWt4te8HewrHu
+::Zh4grVQjdCyDJGyX8VAjFChVVQWGAE+/Fb4I5/jH+/mfnk8UWt46YIqV36yLQA==
 ::YB416Ek+ZG8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
+setlocal enabledelayedexpansion
 
 set "args="
-
 :loop
-if "%~1"=="" goto done
-set "args=%args% %~1"
+if "%1"=="" goto end
+set "args=!args! %1"
 shift
 goto loop
-
+:end
 :done
+
 concurrently -p {name} -t HH:mm:ss.SSS -l 99999 %args%

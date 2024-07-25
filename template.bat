@@ -32,14 +32,15 @@
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
+setlocal enabledelayedexpansion
 
 set "args="
-
 :loop
-if "%~1"=="" goto done
-set "args=%args% %~1"
+if "%1"=="" goto end
+set "args=!args! %1"
 shift
 goto loop
-
+:end
 :done
+
 ::<<<COMMAND>>> %args%

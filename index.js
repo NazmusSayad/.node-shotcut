@@ -7,8 +7,8 @@ const template = fs.readFileSync(
 )
 
 const commands = {
-  n: 'tsx',
-  nw: 'tsx --watch',
+  n: 'ts-node-dev --quiet',
+  nw: 'ts-node-dev --respawn --quiet --rs --clear',
   rp: 'npm-run-all -r false -p',
   rs: 'npm-run-all -r false -s',
   rc: 'concurrently -p {name} -t HH:mm:ss.SSS -l 99999',
