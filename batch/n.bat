@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCqDJBeK+0Y1ZQhcQxCBKX+GBLwS1Oa16vKCwg==
+::Zh4grVQjdCyDJGyX8VAjFChVVQWGAE+/Fb4I5/jH+/mfnk8UWt46YIqV36yLQA==
 ::YB416Ek+ZG8=
 ::
 ::
@@ -43,4 +43,4 @@ goto loop
 :end
 :done
 
-ts-node-dev --quiet %args%
+node --no-warnings %args%

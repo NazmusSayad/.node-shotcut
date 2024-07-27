@@ -43,4 +43,4 @@ goto loop
 :end
 :done
 
-node --no-warnings --watch %args%
+run-p --silent %args%

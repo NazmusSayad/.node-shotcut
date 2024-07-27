@@ -7,8 +7,11 @@ const template = fs.readFileSync(
 )
 
 const commands = {
-  n: 'ts-node-dev --quiet',
-  nw: 'ts-node-dev --respawn --quiet --rs --clear',
+  w: 'nodemon',
+  n: 'node --no-warnings',
+  nw: 'node --no-warnings --watch',
+  rp: 'run-p --silent',
+  rs: 'run-s --silent',
 }
 
 for (const key in commands) {
